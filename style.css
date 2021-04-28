@@ -1,6 +1,6 @@
 
   body , html {
-    background-image: url("./1.jpg");
+   
     display: grid;
     height: 100%;
     background-repeat: no-repeat;
@@ -38,9 +38,14 @@
 .start:hover {
  background-color: rgb(161, 17, 17);
 }
+.tablinks{
+font-size: 30px;
+font-weight: 700;
+border-radius: 10px 10px;
+}
 
 input[type=text] ,#rejester {
-  width: 50%;
+  width: 100%;
   padding: 12px 20px;
   margin:5px 0;
   display: block;
@@ -50,7 +55,7 @@ input[type=text] ,#rejester {
   
 }
 input[type=text] ,#login {
-  width: 50%;
+  width: 100%;
   padding: 12px 20px;
   margin:5px 0;
   display: block;
@@ -59,3 +64,4 @@ input[type=text] ,#login {
   box-sizing: border-box;
   
 }
+

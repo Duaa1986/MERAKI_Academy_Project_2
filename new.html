@@ -8,7 +8,7 @@
       integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="./new.js"/>
+    <link rel="stylesheet" href="./new.css"/>
     <title>To Do List</title>
   </head>
 <body>
@@ -25,52 +25,47 @@
           others
         </button>
       </div>
-       <div class="contanier2">
+      
       <div class= "Main3"> 
+        
       <div id="task-list">
-        <form>
-          <label for="text">pending</label>
-          <label for="text">In progress</label>
-          <label for="text">completed</label>
+        
+         <h2>pendingP</h2> 
+         <h2>In progressP</h2>
+         <h2>completedP</h2>
           
-        </form>
+        
       </div>
      
       <div id="task-work">
-        <form>
-          <label for="text" >pending</label>
-          <label for="text">In progress</label>
-          <label for="text">completed</label>
-        </form>
+       
+          <h2>pendingW</h2> 
+         <h2>In progressW</h2>
+         <h2>completedW</h2>
+       
       </div>
       
 
       <div id="task-others">
-        <form>
-          <label for="text">pending</label>
-          <label for="text">In progress</label>
-          <label for="text">completed</label>
-        </form>
+        
+          <h2>pendingO</h2> 
+          <h2>In progressO</h2>
+          <h2>completedO</h2>
+       
       </div>
-    </div> 
-      <div id="date-of-task">
-        <form>
-          <label for="category" class="category">Choose a category:</label>
-          <select name="category" id="category1">
-            <option value="Personal">Personal</option>
-            <option value="Work">Work</option>
-            <option value="Others">Others</option>
-          </select>
-          <label for="text" class="task">task</label>
-          <input type="text" placeholder="task" />
-          <label for="Due date">date</label>
-          <input type="date" placeholder="date" />
-        </form>
-        <button id="addtask" onclick="addtask();">Add Task</button>
-        <button id="clear" onclick="cleartask();">Clear all</button>
+     
       
-      </div>
-    </div>
+      <div class="add">
+        <h3>Add a task</h3>
+        <form id="todo-form">
+        <input type="text" placeholder="new task" />
+        <input type="date" id="date" placeholder="Due Date (dd/mm/yy)" />
+        <input type="button" class="btn btn-primary" value="Add task" onclick="todo.add();" />
+        </form>
+        <input type="button" class="btn btn-primary" value="Clear all" onclick="todo.clear();"/>
+        <div id="delete-div">Drag Here to Delete</div>
+        </div>
+    
 
     </div>
     <script src="./new.js"></script>
