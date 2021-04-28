@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="new.css" />
     <title>To Do List</title>
   </head>
+<body>
   <body>
     <div class="container">
       <h1 id="header">To Do List</h1>
@@ -24,27 +25,22 @@
           others
         </button>
       </div>
-<div class="contanier2">
-   <div calss = "Main3"> 
+       <div class="contanier2">
+      <div class= "Main3"> 
       <div id="task-list">
         <form>
           <label for="text">pending</label>
-          <input type="text" placeholder="task personal" />
           <label for="text">In progress</label>
-          <input type="text" placeholder="task personal" />
           <label for="text">completed</label>
-          <input type="text" placeholder="task personal" />
+          
         </form>
       </div>
      
       <div id="task-work">
         <form>
           <label for="text" >pending</label>
-          <input type="text" placeholder="task work" />
           <label for="text">In progress</label>
-          <input type="text" placeholder="task work" />
           <label for="text">completed</label>
-          <input type="text" placeholder="task work" />
         </form>
       </div>
       
@@ -52,19 +48,20 @@
       <div id="task-others">
         <form>
           <label for="text">pending</label>
-          <input type="text" placeholder="task others" />
           <label for="text">In progress</label>
-          <input type="text" placeholder="task others" />
           <label for="text">completed</label>
-          <input type="text" placeholder="task others" />
         </form>
       </div>
     </div> 
-   
-
       <div id="date-of-task">
         <form>
-          <label for="text">Title</label>
+          <label for="category" class="category">Choose a category:</label>
+          <select name="category" id="category1">
+            <option value="Personal">Personal</option>
+            <option value="Work">Work</option>
+            <option value="Others">Others</option>
+          </select>
+          <label for="text" class="task">task</label>
           <input type="text" placeholder="task" />
           <label for="Due date">date</label>
           <input type="date" placeholder="date" />
@@ -76,7 +73,6 @@
     </div>
 
     </div>
-
-    <script src="./new.js"></script>
-  </body>
+    <script src="new.js"></script>
+</body>
 </html>
