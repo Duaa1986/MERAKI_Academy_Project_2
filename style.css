@@ -1,0 +1,61 @@
+
+  body , html {
+    background-image: url("./1.jpg");
+    display: grid;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    background-position: center;
+    color: black;
+}
+
+.container{
+  height: 100%;
+  display: grid;
+  align-items: center;
+  align-content: center;
+  font-size: xx-large;
+  font-family: cursive;
+  align-items: center;
+  align-content: center;
+ justify-content:center
+}
+
+.start {
+  height: 20px;
+ width: 300px;
+ text-align: center;
+ padding: 20px 0;
+ background: grey;
+ font-size: 1.5rem;
+ border-radius: 30px 10px;
+ border: solid black;
+ cursor: pointer;
+ 
+}
+
+.start:hover {
+ background-color: rgb(161, 17, 17);
+}
+
+input[type=text] ,#rejester {
+  width: 50%;
+  padding: 12px 20px;
+  margin:5px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  
+}
+input[type=text] ,#login {
+  width: 50%;
+  padding: 12px 20px;
+  margin:5px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  
+}

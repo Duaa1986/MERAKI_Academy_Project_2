@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css" />
+        <title>To Do List</title>
+    </head>
+    <body>
+     
+          <div class="container">
+          
+          
+          <div class="start">
+            <button class="tablinks" onclick="openlist(event, 'rejester')">
+              rejester
+            </button>
+            <button class="tablinks" onclick="openlist(event, 'login')">login</button>
+
+          </div>
+          <div id="rejester">
+            <form>
+              <label for="text">first name</label>
+              <input type="text" placeholder="first name" />
+              <label for="text">last name</label>
+              <input type="text" placeholder="last name" />
+              <label for="text">email</label>
+              <input type="text" placeholder="email" />
+            </form>
+            <div class="btn"><a href="#">rejester</a></div>
+          </div>
+          <div id="login">
+            <form>
+              <label for="text">Email</label>
+              <input type="text" placeholder="Email" />
+              <label for="text">Password</label>
+              <input type="text" placeholder="Password" />
+              <div class="btn"><a href="#">login</a></div>
+            </form>
+          </div>
+        </div>
+          
+        
+      
+<script src="main.js"></script>
+        
+        </body>
+        </html>
+   
+
+    
