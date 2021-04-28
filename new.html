@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="new.css" />
+    <title>To Do List</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="header">To Do List</h1>
+
+      <div class="tab">
+        <button class="tablinks" onclick="openlist(event, 'Personal')">
+          Personal
+        </button>
+        <button class="tablinks" onclick="openlist(event, 'work')">work</button>
+        <button class="tablinks" onclick="openlist(event, 'others')">
+          others
+        </button>
+      </div>
+
+      <div id="task-list">
+        <form>
+          <label for="text">pending</label>
+          <input type="text" placeholder="task personal" />
+          <label for="text">In progress</label>
+          <input type="text" placeholder="task personal" />
+          <label for="text">completed</label>
+          <input type="text" placeholder="task personal" />
+        </form>
+      </div>
+     
+      <div id="task-work">
+        <form>
+          <label for="text" >pending</label>
+          <input type="text" placeholder="task work" />
+          <label for="text">In progress</label>
+          <input type="text" placeholder="task work" />
+          <label for="text">completed</label>
+          <input type="text" placeholder="task work" />
+        </form>
+      </div>
+
+      <div id="task-others">
+        <form>
+          <label for="text">pending</label>
+          <input type="text" placeholder="task others" />
+          <label for="text">In progress</label>
+          <input type="text" placeholder="task others" />
+          <label for="text">completed</label>
+          <input type="text" placeholder="task others" />
+        </form>
+      </div>
+   
+
+      <div id="date-of-task">
+        <form>
+          <label for="text">Title</label>
+          <input type="text" placeholder="task" />
+          <label for="Due date">date</label>
+          <input type="date" placeholder="date" />
+        </form>
+        <button id="addtask" onclick="addtask();">Add Task</button>
+        <button id="clear" onclick="cleartask();">Clear all</button>
+      
+      </div>
+    </div>
+
+    <script src="./new.js"></script>
+  </body>
+</html>

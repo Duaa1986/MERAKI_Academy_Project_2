@@ -1,0 +1,94 @@
+
+    body , html {
+        background-image: url("./1.jpg");
+        display: grid;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        background-position: center;
+        color: black;
+        font-size: 1.5rem;
+        font-family: cursive;
+    }
+  
+         
+    #header {
+        text-align: center;
+        font-size: 4rem;
+        font-family: cursive;
+    }
+
+.tab {
+    height: 50px;
+    width: 500px;
+    text-align: center;
+    padding: 20px 0;
+    background: grey;
+    font-size: 1rem;
+    border-radius: 30px 10px;
+    border: solid black;
+    cursor: pointer;
+  }
+  .tablinks{
+    font-size: 30px;
+    font-weight: 700;
+    border-radius: 10px 10px;
+  }
+  
+  .tab:hover {
+    background-color: rgb(122, 112, 112);
+  }
+
+  
+
+input[type=text] ,#task-list {
+    width: 50%;
+    padding: 12px 20px;
+    margin:5px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+    
+  }
+  input[type=text] ,#task-work {
+    width: 50%;
+    padding: 12px 20px;
+    margin:5px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    
+    
+  }
+  input[type=text] ,#task-others {
+    width: 50%;
+    padding: 12px 20px;
+    margin:5px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    
+  }
+  input[type=date]  {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    
+  }
+
+  #date-of-task{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    float: right;
+
+  }
