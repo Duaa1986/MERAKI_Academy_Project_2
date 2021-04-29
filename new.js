@@ -36,21 +36,26 @@ function addtask() {
     <button  id='completed'>Add to completed</button>
     `);
     $("#completed").click(addToCompleted)
+    
 
    
   } else if (value === "Work") {
     $("#task-work").append(`<div>
     <p> ${$('#Addtask').val()} </p>
     <p> ${$('#date').val()} </p>
-    </div>`  
+    </div>
+    <button  id='completed'>Add to completed</button>`
     );
-    
+    $("#completed").click(addToCompleted)
 
   }else if (value === "Others") {
     $("#task-others").append(`<div>
     <p> ${$('#Addtask').val()} </p>
     <p> ${$('#date').val()} </p>
-    </div>`);
+    </div>  
+    <button  id='completed'>Add to completed</button> `
+    );
+    $("#completed").click(addToCompleted)
   }
 
 }

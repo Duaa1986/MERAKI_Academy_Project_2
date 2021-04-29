@@ -29,44 +29,42 @@
       <div class= "Main3"> 
       <div id="task-list">
         <div id="personalPendeing">
-          <h2>Perrsonal pending</h2>
+          <h2>Personal pending</h2>
         </div>
         <div id="personalCompleted">
           <h2>completed</h2>
         </div>
-        
-        
-          
-          
-          
-        
       </div>
-     
+
       <div id="task-work">
-        <!-- <form>
+        <div id="workPendeing">
           <h2>work pending</h2>
-          <h2>In progress</h2>
-          <h2>completed</h2>
-        </form> -->
+        </div>
+        <div id="workCompleted">
+          <h2>work completed</h2>
+        </div>
       </div>
       
 
       <div id="task-others">
-        <!-- <form>
+        <div id="othersPendeing">
           <h2>others pending</h2>
-          <h2>In progress</h2>
-          <h2>completed</h2>
-        </form> -->
+        </div>
+        <div id="othersCompleted">
+          <h2> others completed</h2>
+        </div>
       </div>
     </div> 
       <div id="date-of-task">
+        <label for="category" >Choose a category:</label>
         <form>
-          <label for="category" >Choose a category:</label>
+          <div>
           <select name="category" id="category1">
             <option value="Personal">Personal</option>
             <option value="Work">Work</option>
             <option value="Others">Others</option>
           </select>
+        </div>
           <label for="text" class="task">task</label>
           <input type="text" placeholder="Add task" name="Addtask" id="Addtask">
           <label for="Due date">date</label>

@@ -1,5 +1,5 @@
 body , html {
-  background-image: url("./3.jpg");
+  background-image: url("./6.jpg");
   display: grid;
   height: 100%;
   background-repeat: no-repeat;
@@ -27,17 +27,20 @@ height: 50px;
 width: 500px;
 text-align: center;
 padding: 20px 0;
-background: grey;
+background: rgb(218, 176, 176);
 font-size: 1rem;
 border-radius: 30px 10px;
 border: solid black;
 cursor: pointer;
+font-family: cursive;
+top: 30%;
 
 }
 .tablinks{
 font-size: 30px;
 font-weight: 700;
 border-radius: 10px 10px;
+font-family: cursive;
 }
 
 .tab:hover {
@@ -53,7 +56,8 @@ width: 10%;
 padding: 12px 20px;
 margin:5px 0;
 display: block;
-border: 10px solid black;
+border: 1px solid black;
+background-color: rgb(96, 119, 112);
 border-radius: 4px;
 display: flex;
 flex-direction: column;
@@ -61,46 +65,55 @@ flex-direction: column;
 
 }
 #task-work {
-width: 10%;
-padding: 12px 20px;
-margin:5px 0;
-display: block;
-border: 10px solid black;
-border-radius: 4px;
-padding: 20px;
+  width: 10%;
+  padding: 12px 20px;
+  margin:5px 0;
+  display: block;
+  border: 1px solid black;
+  background-color: rgb(96, 119, 112);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+
 
 
 }
 #task-others {
-width: 10%;
-padding: 12px 20px;
-margin:5px 0;
-display: block;
-border: 10px solid black;
-border-radius: 4px;
+  width: 10%;
+  padding: 12px 20px;
+  margin:5px 0;
+  display: block;
+  border: 1px solid black;
+  background-color: rgb(96, 119, 112);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
 
 
 }
 
 
 #date-of-task{
-  width:20%;
+  height: auto;
+  width:auto;
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: #67837f;
   padding: 20px;
   font-size: large;
   position: absolute;
   bottom: 0;
   right: 0;
+  border: 5px solid black;
+  text-align: left;
   }
 
 
 input[type=text], #date-of-task {
-  width:50%;
+  width:30%;
   padding: 12px 20px;
   margin: 8px 0;
   display: block;
-  border: 1px solid #ccc;
+  border: 5px solid black;
   border-radius: 4px;
  
   
@@ -108,11 +121,23 @@ input[type=text], #date-of-task {
   }
 
   input[type=date], #date-of-task {
-    width:50%;
+    width:30%;
     padding: 12px 20px;
     margin: 8px 0;
     display: block;
-    border: 1px solid #ccc;
+    border: 5px solid black;
     border-radius: 4px;
     
     }
+
+    #personalPendeing , #workPendeing ,#othersPendeing{
+      border-style: solid;
+      width: 100%;
+      height: 100%;
+      }
+      
+      #personalCompleted, #workCompleted, #othersCompleted {
+        border-style: solid;
+        width: 100%;
+      height: 100%;
+      }
