@@ -1,8 +1,8 @@
 
 // to do list page 
-$("#task-personal").hide();
-$("#task-work").hide();
-$("#task-others").hide();
+$("#app").hide();
+$("#app1").hide();
+$("#app2").hide();
 
 const openlist = (e, button) => {
   if (button === "Personal") {
