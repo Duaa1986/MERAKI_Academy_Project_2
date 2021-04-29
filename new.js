@@ -6,17 +6,17 @@ $("#app2").hide();
 
 const openlist = (e, button) => {
   if (button === "Personal") {
-    $("#task-personal").show();
-    $("#task-work").hide();
-    $("#task-others").hide();
+    $("#app2").show();
+    $("#app1").hide();
+    $("#app").hide();
   } else if (button === "work") {
-    $("#task-personal").hide();
-    $("#task-work").show();
-    $("#task-others").hide();
+    $("#app2").hide();
+    $("#app1").show();
+    $("#app").hide();
   }else if (button === "others") {
-  $("#task-personal").hide();
-  $("#task-work").hide();
-  $("#task-others").show();
+  $("#app2").hide();
+  $("#app1").hide();
+  $("#app").show();
 };
 } ;
 
