@@ -12,31 +12,78 @@
     <title>To Do List</title>
   </head>
   <body>
-    <header>
-    </header>
-    <main id="app">
-        <section id="board">
+	
+	<div id="container">
+		<div id="menuSide">
+			<input type="text" class="searchInput" placeholder="Search">
+			
+			
+			
+			<div id="importantButton" class="menuButton">
+				<i class="icon-star"></i>
+				Important
+				<div id="importantTaskCount" class="taskCount"></div>
+			</div>
+			
+			
+			
+			<div id="TasksButton" class="menuButton">
+				<i class="icon-tasks"></i>
+				Tasks
+				<div id="TaskCount" class="taskCount"></div>
+			</div>
+			
+			<div id="completedButton" class="menuButton">
+				<i class="icon-calendar-check-o"></i>
+				Completed
+				<div id="completedTaskCount" class="taskCount"></div>
+			</div>
+			<div id="ClearStorage" class="menuButton">
+				<i class="icon-menu-1"></i>
+				Reload storage
+			</div>
+	
+	
+		</div>
+		<div id="contentSide">
 
-            </div>
-            <div id="add-task-form">
-                <input id="task-value" placeholder="Add task">
-                <button id="add-task">+</button>
-            </div>
-        </section>
-        <section id="columns">
-            <div class="column dropzone">
-                <h3 class="column-title">Pending</h3>
-                <ul class="tasks" id="tasks-added">
-                </ul>
-            </div>
-            <div class="column dropzone">
-                <h3 class="column-title">In Progress</h3>
-            </div>
-            </div>
-            <div class="column dropzone">
-                <h3 class="column-title">Done</h3>
-            </div>
-        </section>
-    </main>
+			<div id="TasksContent" class="boxContent">
+				<div id="TasksHeader" class="contentHeader"> <h2>Tasks To Do</h2> </div>
+				<div id="Tasks"> 
+					<i class="icon-plus"></i>
+					<input type="text" class="taskInput" id="TaskInput" placeholder="Add task"> 
+					 <ul id="taskList"> 
+					</ul>
+				</div>
+			</div>
+			
+			<div id="CompletedContent"  class="boxContent">
+				<div id="CompletedHeader" class="contentHeader"> <h2>Completed</h2> </div>
+				<div id="completedTasks"> 
+					<ul id="complitedList"> 
+					</ul>
+				</div>
+				
+			</div>
+			
+			<div id="ImportantContent"  class="boxContent">
+				<div id="ImportantHeader" class="contentHeader"> <h2>Important</h2> </div>
+				<div id="ImportantTasks">
+					<ul id="importantList"> 
+					</ul>
+				</div>
+			</div>
+	
+	
+		</div>
+	
+	
+	</div>
+	
+	<script
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+	<script src="new.js"></script>
 </body>
 </html>
