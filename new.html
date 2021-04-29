@@ -8,80 +8,77 @@
       integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="./new.css"/>
+    <link rel="stylesheet" href="new.css" />
     <title>To Do List</title>
-</head>
-    <body>
-	
-        <div id="container">
-            <div id="menuSide">
-            
-                <div id="importantButton" class="menuButton">
-                    <i class="icon-star"></i>
-                    Important
-                    <div id="importantTaskCount" class="taskCount"></div>
-                </div>
-                
-                
-                
-                <div id="TasksButton" class="menuButton">
-                    <i class="icon-tasks"></i>
-                    Tasks
-                    <div id="TaskCount" class="taskCount"></div>
-                </div>
-                
-                <div id="completedButton" class="menuButton">
-                    <i class="icon-calendar-check-o"></i>
-                    Completed
-                    <div id="completedTaskCount" class="taskCount"></div>
-                </div>
-                <div id="ClearStorage" class="menuButton">
-                    <i class="icon-menu-1"></i>
-                    Clear Storage
-                </div>
-        
-        
-            </div>
-            <div id="contentSide">
-    
-                <div id="TasksContent" class="boxContent">
-                    <div id="TasksHeader" class="contentHeader"> <h1>Tasks To Do</h1> </div>
-                    <div id="Tasks"> 
-                        <i class="icon-plus"></i>
-                        <input type="text" class="taskInput" id="TaskInput" placeholder="Add task"> 
-                         <ul id="taskList"> 
-                        </ul>
-                    </div>
-                </div>
-                
-                <div id="CompletedContent"  class="boxContent">
-                    <div id="CompletedHeader" class="contentHeader"> <h2>Completed</h2> </div>
-                    <div id="completedTasks"> 
-                        <ul id="complitedList"> 
-                        </ul>
-                    </div>
-                    
-                </div>
-                
-                <div id="ImportantContent"  class="boxContent">
-                    <div id="ImportantHeader" class="contentHeader"> <h2>Important</h2> </div>
-                    <div id="ImportantTasks">
-                        <ul id="importantList"> 
-                        </ul>
-                    </div>
-                </div>
-        
-        
-            </div>
-        
-        
+  </head>
+<body>
+  <body>
+    <div class="container">
+      <h1 id="header">To Do List</h1>
+
+      <div class="tab">
+        <button class="tablinks" onclick="openlist( 'Personal')">
+          Personal
+        </button>
+        <button class="tablinks" onclick="openlist( 'work')">work</button>
+        <button class="tablinks" onclick="openlist( 'others')">
+          others
+        </button>
+      </div>
+       <div class="contanier2">
+      <div class= "Main3"> 
+      <div id="task-list">
+        <div id="personalPendeing">
+          <h2>Perrsonal pending</h2>
+        </div>
+        <div id="personalCompleted">
+          <h2>completed</h2>
         </div>
         
-        <script
-          src="https://code.jquery.com/jquery-3.6.0.js"
-          integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-          crossorigin="anonymous"
-        ></script>
-        <script src="new.js"></script>
-    </body>
+        
+          
+          
+          
+        
+      </div>
+     
+      <div id="task-work">
+        <!-- <form>
+          <h2>work pending</h2>
+          <h2>In progress</h2>
+          <h2>completed</h2>
+        </form> -->
+      </div>
+      
+
+      <div id="task-others">
+        <!-- <form>
+          <h2>others pending</h2>
+          <h2>In progress</h2>
+          <h2>completed</h2>
+        </form> -->
+      </div>
+    </div> 
+      <div id="date-of-task">
+        <form>
+          <label for="category" >Choose a category:</label>
+          <select name="category" id="category1">
+            <option value="Personal">Personal</option>
+            <option value="Work">Work</option>
+            <option value="Others">Others</option>
+          </select>
+          <label for="text" class="task">task</label>
+          <input type="text" placeholder="Add task" name="Addtask" id="Addtask">
+          <label for="Due date">date</label>
+          <input type="date" placeholder="date" name="date" id='date'/>
+        </form>
+        <button id="add-task" onclick="addtask();">Add Task</button>
+        <button id="clear" onclick="cleartask();">Clear all</button>
+      
+      </div>
+    </div>
+
+    </div>
+    <script src="new.js"></script>
+</body>
 </html>

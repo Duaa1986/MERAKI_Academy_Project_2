@@ -2,12 +2,12 @@ $("#rejester").hide();
 $("#login").hide();
 
 
-const openlist = (e, btn) => {
-  if (btn=== "rejester") {
+const openlist = (e, button) => {
+  if (button === "rejester") {
     $("#rejester").show();
     $("#login").hide();
     
-  } else if (btn === "login") {
+  } else if (button === "login") {
     $("#rejester").hide();
     $("#login").show();
    
