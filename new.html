@@ -11,107 +11,32 @@
     <link rel="stylesheet" href="./new.css"/>
     <title>To Do List</title>
   </head>
-<body>
-
-  <section id="board">
-
-  </div>
-  <div id="add-task-form">
-      <input id="task-value" placeholder="Add task">
-      <button id="add-task">+</button>
-  </div>
-    <div class="container">
-      <h1 id="header">To Do List</h1>
-
-      <div class="tab">
-        <button class="tablinks" onclick="openlist(event, 'Personal')">
-          Personal
-        </button>
-        <button class="tablinks" onclick="openlist(event, 'work')">work</button>
-        <button class="tablinks" onclick="openlist(event, 'others')">
-          others
-        </button>
-      </div>
-      
-      <main id="app">
+  <body>
+    <header>
+    </header>
+    <main id="app">
         <section id="board">
-         </section>
-          <div id="task-others">
-           <section id="columns">
-             <div class="column dropzone">
-                 <h3 class="column-title">Pending</h3>
-                 <ul class="tasks" id="tasks-added">
-                 </ul>
-             </div>
-             <div class="column dropzone">
-                 <h3 class="column-title">In Progress</h3>
-             </div>
-             </div>
-             <div class="column dropzone">
-                 <h3 class="column-title">Done</h3>
-                </div>
-           </div>
-         </section>
-        </main>
 
-    <main1 id="app1">
-      <section id="board1">
-
-          </div>
-      </section>
-      <div id="task-work">
-        <section id="columns1">
-           <div class="column dropzone1">
-               <h3 class="column-title1">Pending</h3>
-               <ul class="tasks1" id="tasks-added1">
-               </ul>
-           </div>
-           <div class="column dropzone">
-               <h3 class="column-title1">In Progress</h3>
-           </div>
-           </div>
-           <div class="column dropzone1">
-               <h3 class="column-title1">Done</h3>
-              </div>
-         </div>
-       </section>
-  </main>
-  <main2 id="app2">
-    <section id="board2">
-
-
-    </section>
-    <div id="task-personel">
-      <section id="columns2">
-         <div class="column dropzone2">
-             <h3 class="column-title2">Pending</h3>
-             <ul class="tasks2" id="tasks-added2">
-             </ul>
-         </div>
-         <div class="column dropzone2">
-             <h3 class="column-title2">In Progress</h3>
-         </div>
-         </div>
-         <div class="column dropzone2">
-             <h3 class="column-title2">Done</h3>
             </div>
-       </div>
-     </section>
-</main>
-    </div>
-<div class="add">
-   <h3>Add a task</h3>
-    <form id="todo-form">
-      <select name="category" id="category1">
-         <option value="Personal">Personal</option>
-         <option value="Work">Work</option>
-         <option value="Others">Others</option>
-        </select>
- </div>
- 
-    
-
-    
-    <script src="./new.js"></script>
+            <div id="add-task-form">
+                <input id="task-value" placeholder="Add task">
+                <button id="add-task">+</button>
+            </div>
+        </section>
+        <section id="columns">
+            <div class="column dropzone">
+                <h3 class="column-title">Pending</h3>
+                <ul class="tasks" id="tasks-added">
+                </ul>
+            </div>
+            <div class="column dropzone">
+                <h3 class="column-title">In Progress</h3>
+            </div>
+            </div>
+            <div class="column dropzone">
+                <h3 class="column-title">Done</h3>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
