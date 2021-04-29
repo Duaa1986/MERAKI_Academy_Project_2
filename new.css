@@ -1,3 +1,10 @@
+* {
+
+  padding:0 ;
+  margin: 0 ;
+
+}
+
 body , html {
   background-image: url("./6.jpg");
   display: grid;
@@ -23,10 +30,9 @@ display: grid;
 }
 
 .tab {
-height: 50px;
-width: 500px;
+height:70px;
+width: 800px;
 text-align: center;
-padding: 20px 0;
 background: rgb(218, 176, 176);
 font-size: 1rem;
 border-radius: 30px 10px;
@@ -39,17 +45,19 @@ top: 30%;
 .tablinks{
 font-size: 30px;
 font-weight: 700;
-border-radius: 10px 10px;
+border-radius: 15px 15px;
 font-family: cursive;
+width: 30%;
 }
 
-.tab:hover {
+.tablinks:hover {
 background-color: rgb(122, 112, 112);
 }
 
 .main3 {
   font-size: large;
   float: left;
+  
 }
 #task-list {
 width: 10%;
@@ -61,6 +69,7 @@ background-color: rgb(96, 119, 112);
 border-radius: 4px;
 display: flex;
 flex-direction: column;
+
 
 
 }
@@ -134,10 +143,14 @@ input[type=text], #date-of-task {
       border-style: solid;
       width: 100%;
       height: 100%;
+      color :blanchedalmond;
+      border: 5px solid black;
       }
       
       #personalCompleted, #workCompleted, #othersCompleted {
         border-style: solid;
         width: 100%;
       height: 100%;
+      color :blanchedalmond;
+      border: 5px solid black;
       }

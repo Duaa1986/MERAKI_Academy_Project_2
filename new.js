@@ -33,29 +33,28 @@ function addtask() {
     <p> ${$('#Addtask').val()} </p>
     <p> ${$('#date').val()} </p>
     </div>
-    <button  id='completed'>Add to completed</button>
+    <button  id='personalcompleted'>Add to completed</button>
     `);
-    $("#completed").click(addToCompleted)
+    $("#personalcompleted").click(addToCompleted)
     
-
    
   } else if (value === "Work") {
     $("#task-work").append(`<div>
     <p> ${$('#Addtask').val()} </p>
     <p> ${$('#date').val()} </p>
     </div>
-    <button  id='completed'>Add to completed</button>`
+    <button  id='workcompleted'>Add to completed</button>`
     );
-    $("#completed").click(addToCompleted)
+    $("#workcompleted").click(addToCompleted2)
 
   }else if (value === "Others") {
     $("#task-others").append(`<div>
     <p> ${$('#Addtask').val()} </p>
     <p> ${$('#date').val()} </p>
     </div>  
-    <button  id='completed'>Add to completed</button> `
+    <button  id='otherscompleted'>Add to completed</button> `
     );
-    $("#completed").click(addToCompleted)
+    $("#otherscompleted").click(addToCompleted3)
   }
 
 }
@@ -66,4 +65,10 @@ function addToCompleted() {
 }
 
 
-// $("#completed").click(addToCompleted)
+
+function addToCompleted2() {
+  $("#workCompleted").append(element);
+}
+function addToCompleted3() {
+  $("#othersCompleted").append(element);
+}
