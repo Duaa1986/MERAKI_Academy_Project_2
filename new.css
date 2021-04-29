@@ -1,13 +1,96 @@
-body,
-html {
-  background-image: url("./3.jpg");
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  text-align: center;
-  background-position: center;
-  color: rgb(36, 33, 33);
-  font-family: cursive;
+:root {
+  display: block;
+
+}
+body {
+  background-color: #F5F7FA;
+}
+#app {
+  margin-left: 100px;
+}
+#board {
+  margin-top: 60px;
+  display: flex;
+  margin-bottom: 60px;
+}
+
+}
+#columns {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+}
+.column {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 300px;
+  background: #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 1px;
+  margin-left: 40px;
+  background-color: white;
+}
+.column:nth-child(1) {
+  margin-left: 0px;
+}
+.column:hover {
+  border: 1px solid #4786FF;
+  box-shadow: 0px 1px 6px #4786FF;
+}
+.column-title {
+  margin: 24px 0px 0px 24px;
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+}
+.task {
+  list-style-type: none;
+  margin: 16px 0px 0px 24px;
+  padding: 10px 8px 10px 10px;
+  position: relative;
+  background-color: white;
+  border: 1px solid #EBEDF0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  min-height: 50px;
+  width: 200px;
+}
+.task:nth-child(1) {
+  margin-top: 32px;
+}
+.task .task-content {
+  margin: 16px 16px 0 16px;
+  font-family: 'Lato';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #54585A;
+}
+.task:hover {
+  background: #FFFFFF;
+  border: 1px solid #4786FF;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 4px #4786FF;
+  border-radius: 2px;
+}
+.task .trash {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  font-family: 'Lato';
+  color: #54585A;
+}
+.task .trash:hover {
+  color: #c42d1c;
+}
+.hold:active:hover {
+  border: solid 3px blue;
+}
+.hovered {
+  border-style: dashed;
+}
+.invisible {
+  display: none;
 }
 
 #header {
@@ -42,18 +125,35 @@ html {
   width: 250px;
   float: right;
   margin: 0 5px;
-  background-color: #e3e3e3;
   min-height: 240px;
   border-radius: 10px;
   padding-bottom: 15px;
+  height: 200px;
+  width: 50%;
+  background-color: powderblue;
+  display: flex;
+  flex-wrap:wrap;
 }
 
 h2 {
   text-align: center;
   font-size: large;
 }
-#task-list {
-  display: inline;
+#task-personal>h2 {
+  display: flex;
+  flex-wrap:wrap;
+  float:right;
+  align-items: flex-start;
+  border: azure;
+  padding:2rem;
+  height: 100px;
+  width: 100%;
+  background-color: rgb(230, 207, 176);
+  flex: 1 0 150px;
+  height: 200px;
+  background-color: #f0f;
+  border:solid 1px #000;
+  margin: 5px;
 }
 
 .add input {

@@ -12,7 +12,7 @@
     <title>To Do List</title>
   </head>
 <body>
-  <body>
+  
     <div class="container">
       <h1 id="header">To Do List</h1>
 
@@ -26,38 +26,82 @@
         </button>
       </div>
       
-      <div class= "Main3"> 
-        
-      <div id="task-list">
-        
-         <h2>pendingP</h2> 
-         <h2>In progressP</h2>
-         <h2>completedP</h2>
-          
-        
-      </div>
-     
-      <div id="task-work">
-       
-          <h2>pendingW</h2> 
-         <h2>In progressW</h2>
-         <h2>completedW</h2>
-       
-      </div>
-      
+      <main id="app">
+        <section id="board">
 
-      <div id="task-others">
-        
-          <h2>pendingO</h2> 
-          <h2>In progressO</h2>
-          <h2>completedO</h2>
-       
-      </div>
-     
+            </div>
+        </section>
+        <div id="task-others">
+          <section id="columns">
+             <div class="column dropzone">
+                 <h3 class="column-title">Pending</h3>
+                 <ul class="tasks" id="tasks-added">
+                 </ul>
+             </div>
+             <div class="column dropzone">
+                 <h3 class="column-title">In Progress</h3>
+             </div>
+             </div>
+             <div class="column dropzone">
+                 <h3 class="column-title">Done</h3>
+                </div>
+           </div>
+         </section>
+    </main>
+    <main1 id="app1">
+      <section id="board1">
+
+          </div>
+      </section>
+      <div id="task-work">
+        <section id="columns1">
+           <div class="column dropzone1">
+               <h3 class="column-title1">Pending</h3>
+               <ul class="tasks1" id="tasks-added1">
+               </ul>
+           </div>
+           <div class="column dropzone">
+               <h3 class="column-title1">In Progress</h3>
+           </div>
+           </div>
+           <div class="column dropzone1">
+               <h3 class="column-title1">Done</h3>
+              </div>
+         </div>
+       </section>
+  </main>
+  <main2 id="app2">
+    <section id="board2">
+
+        </div>
+    </section>
+    <div id="task-personel">
+      <section id="columns2">
+         <div class="column dropzone2">
+             <h3 class="column-title2">Pending</h3>
+             <ul class="tasks2" id="tasks-added2">
+             </ul>
+         </div>
+         <div class="column dropzone2">
+             <h3 class="column-title2">In Progress</h3>
+         </div>
+         </div>
+         <div class="column dropzone2">
+             <h3 class="column-title2">Done</h3>
+            </div>
+       </div>
+     </section>
+</main>
+    </div>
       
       <div class="add">
         <h3>Add a task</h3>
         <form id="todo-form">
+        <select name="category" id="category1">
+            <option value="Personal">Personal</option>
+            <option value="Work">Work</option>
+            <option value="Others">Others</option>
+        </select>
         <input type="text" placeholder="new task" />
         <input type="date" id="date" placeholder="Due Date (dd/mm/yy)" />
         <input type="button" class="btn btn-primary" value="Add task" onclick="todo.add();" />
@@ -67,7 +111,7 @@
         </div>
     
 
-    </div>
+    
     <script src="./new.js"></script>
 </body>
 </html>
