@@ -1,6 +1,6 @@
 
   body , html {
-   
+   background-image: url("./3.jpg");
     display: grid;
     height: 100%;
     background-repeat: no-repeat;
