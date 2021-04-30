@@ -75,16 +75,16 @@ function addToCompleted(e) {
   $('#personalCompleted').append(e.target.previousElementSibling)
   $('#personalPendeing').remove(`#${e.target.previousElementSibling.id}`)
   
-   
   }
  
 
-
 function addToCompleted2() {
-  $("#workCompleted").append(element);
+  e.target.style.display = "none";
+  $('#workCompleted').append(e.target.previousElementSibling)
+  $('#workPendeing').remove(`#${e.target.previousElementSibling.id}`)
 }
 function addToCompleted3() {
-  $("#workCompleted").append(element);
+  
 }
 
 
@@ -96,6 +96,7 @@ function cleartask() {
 
 }
 
-
+//let array =[{name: valuetask ,date : valuedate}];
+//array.push({name:valuetask,date: valuedate });
 
 
