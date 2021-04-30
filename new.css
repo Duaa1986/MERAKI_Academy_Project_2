@@ -125,6 +125,12 @@ input[type=text], #date-of-task {
   border: 5px solid black;
   border-radius: 4px;
 }
+#weather {
+  display: inline;
+  position: fixed;
+  top: 0;
+  right:0 ;
+}
  .radio {
 
  position: fixed;
