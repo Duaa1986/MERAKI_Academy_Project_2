@@ -39,7 +39,7 @@ function addtask() {
     
    
   } else if (value === "Work") {
-    $("#task-work").append(`<div>
+    $("#workPendeing").append(`<div>
     <p> ${$('#Addtask').val()} </p>
     <p> ${$('#date').val()} </p>
     </div>
@@ -48,7 +48,7 @@ function addtask() {
     $("#workcompleted").click(addToCompleted2)
 
   }else if (value === "Others") {
-    $("#task-others").append(`<div>
+    $("#othersPendeing").append(`<div>
     <p> ${$('#Addtask').val()} </p>
     <p> ${$('#date').val()} </p>
     </div>  
@@ -62,6 +62,8 @@ function addtask() {
 
 function addToCompleted() {
   $("#personalCompleted").append(element);
+  if(element === "#personalCompleted" )
+  $("#personalPendeing").remove(element)
 }
 
 
@@ -72,3 +74,4 @@ function addToCompleted2() {
 function addToCompleted3() {
   $("#othersCompleted").append(element);
 }
+

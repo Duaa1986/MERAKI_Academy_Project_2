@@ -124,9 +124,12 @@ input[type=text], #date-of-task {
   display: block;
   border: 5px solid black;
   border-radius: 4px;
- 
-  
-  
+}
+ .radio {
+
+ position: fixed;
+ bottom:0;
+ left: 0;
   }
 
   input[type=date], #date-of-task {
