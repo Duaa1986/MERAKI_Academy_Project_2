@@ -47,20 +47,22 @@ function addtask() {
     <p> ${$('#Addtask').val()} </p>
     <p> ${$('#date').val()} </p>
     </div>
-    <button  class='workcompleted'>Add to completed</button>`
+    <button  class='workcompleted${workcount}'>Add to completed</button>`
     );
     $(".workcompleted").click(addToCompleted2)
+
+    workcount++;
 
   }else if (value === "Others") {
     $("#othersPendeing").append(`<div>
     <p> ${$('#Addtask').val()} </p>
     <p> ${$('#date').val()} </p>
     </div>  
-    <button  class='otherscompleted'>Add to completed</button> `
+    <button  class='otherscompleted${otherscount}'>Add to completed</button> `
     );
     $(".otherscompleted").click(addToCompleted3)
   }
-
+otherscount++;
 
   $('#Addtask').val("")
   $('#Addtask').focus()
