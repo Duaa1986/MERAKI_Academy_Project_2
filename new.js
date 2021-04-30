@@ -62,7 +62,7 @@ function addtask() {
     </div>  
     <button  class='otherscompleted${othersCount}'>Add to completed</button> `
     );
-    $(".otherscompleted").click(addToCompleted3)
+    $(`.otherscompleted${othersCount}`).click(addToCompleted3)
   }
 othersCount++;
 
@@ -86,8 +86,10 @@ function addToCompleted2(e) {
   $('#workPendeing').remove(`#${e.target.previousElementSibling.id}`)
 }
 
-function addToCompleted3() {
-  
+function addToCompleted3(e) {
+  e.target.style.display = "none";
+  $('#othersCompleted').append(e.target.previousElementSibling)
+  $('#othersPendeing').remove(`#${e.target.previousElementSibling.id}`)
 }
 
 
@@ -99,7 +101,16 @@ function cleartask() {
 
 }
 
-//let array =[{name: valuetask ,date : valuedate}];
-//array.push({name:valuetask,date: valuedate });
+//var data =[];
+//data.push({kay: "valuetask" ,value : valuedate});
+
+//localStorage.setItem('dataInfo', JSON.stringify(data));
 
 
+//var addNewdata = funcation (kay,value) {
+  //var data = JSON.parse(localStorage.getItem('dataInfo')) || [];
+  //data.push({kay: kay ,value : value});
+
+  //localStorage.setItem('dataInfo', JSON.stringify(data));
+
+//}
