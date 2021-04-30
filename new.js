@@ -19,23 +19,27 @@ const openlist = (button) => {
 } ;
 
 
-let element;
+let personalCount =0
 
 function addtask() {
+  
+
 
   let value = $('#category1').val();
   if (value === "Personal") {
-     element = `<div>
-    <p> ${$('#Addtask').val()} </p>
-    <p> ${$('#date').val()} </p>
-    </div>`
+    
     $("#personalPendeing").append(`<div>
     <p> ${$('#Addtask').val()} </p>
     <p> ${$('#date').val()} </p>
     </div>
-    <button  id='personalcompleted'>Add to completed</button>
+    <button  id='personalcompleted${personalCount}'>Add to completed</button>
     `);
-    $("#personalcompleted").click(addToCompleted)
+
+
+    $(`#personalcompleted${personalCount}`).click(addToCompleted)
+
+
+    personalCount++;
     
    
   } else if (value === "Work") {
@@ -43,35 +47,53 @@ function addtask() {
     <p> ${$('#Addtask').val()} </p>
     <p> ${$('#date').val()} </p>
     </div>
-    <button  id='workcompleted'>Add to completed</button>`
+    <button  class='workcompleted'>Add to completed</button>`
     );
-    $("#workcompleted").click(addToCompleted2)
+    $(".workcompleted").click(addToCompleted2)
 
   }else if (value === "Others") {
     $("#othersPendeing").append(`<div>
     <p> ${$('#Addtask').val()} </p>
     <p> ${$('#date').val()} </p>
     </div>  
-    <button  id='otherscompleted'>Add to completed</button> `
+    <button  class='otherscompleted'>Add to completed</button> `
     );
-    $("#otherscompleted").click(addToCompleted3)
+    $(".otherscompleted").click(addToCompleted3)
   }
 
+
+  $('#Addtask').val("")
+  $('#Addtask').focus()
+
 }
 
 
-function addToCompleted() {
-  $("#personalCompleted").append(element);
-  if(element === "#personalCompleted" )
-  $("#personalPendeing").remove(element)
-}
-
+function addToCompleted(e) {
+  e.target.style.display = "none";
+  $('#personalCompleted').append(e.target.previousElementSibling)
+  $('#personalPendeing').remove(`#${e.target.previousElementSibling.id}`)
+  
+   
+  }
+ 
 
 
 function addToCompleted2() {
   $("#workCompleted").append(element);
 }
 function addToCompleted3() {
-  $("#othersCompleted").append(element);
+  $("#workCompleted").append(element);
 }
+
+
+function cleartask() {
+  $("#workCompleted").html('<h2>work completed</h2>')
+  $('#personalCompleted').html(' <h2>personal completed</h2>')
+  $('#othersCompleted').html('<h2> others completed</h2>')
+
+
+}
+
+
+
 
