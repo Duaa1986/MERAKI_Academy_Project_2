@@ -19,7 +19,9 @@ const openlist = (button) => {
 } ;
 
 
-let personalCount =0
+let personalCount =0;
+let workCount =  0 ;
+let othersCount = 0;
 
 function addtask() {
   
@@ -47,22 +49,22 @@ function addtask() {
     <p> ${$('#Addtask').val()} </p>
     <p> ${$('#date').val()} </p>
     </div>
-    <button  class='workcompleted${workcount}'>Add to completed</button>`
+    <button  class='workcompleted${workCount}'>Add to completed</button>`
     );
-    $(".workcompleted").click(addToCompleted2)
+    $(`.workcompleted${workCount}`).click(addToCompleted2)
 
-    workcount++;
+    workCount++;
 
   }else if (value === "Others") {
     $("#othersPendeing").append(`<div>
     <p> ${$('#Addtask').val()} </p>
     <p> ${$('#date').val()} </p>
     </div>  
-    <button  class='otherscompleted${otherscount}'>Add to completed</button> `
+    <button  class='otherscompleted${othersCount}'>Add to completed</button> `
     );
     $(".otherscompleted").click(addToCompleted3)
   }
-otherscount++;
+othersCount++;
 
   $('#Addtask').val("")
   $('#Addtask').focus()
@@ -78,11 +80,12 @@ function addToCompleted(e) {
   }
  
 
-function addToCompleted2() {
+function addToCompleted2(e) {
   e.target.style.display = "none";
   $('#workCompleted').append(e.target.previousElementSibling)
   $('#workPendeing').remove(`#${e.target.previousElementSibling.id}`)
 }
+
 function addToCompleted3() {
   
 }
