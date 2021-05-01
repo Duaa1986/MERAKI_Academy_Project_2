@@ -75,6 +75,7 @@ html {
   border-radius: 4px;
   display: flex;
   flex-direction: column;
+  
 }
 #task-others {
   width: 15%;
