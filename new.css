@@ -37,7 +37,6 @@ html {
   cursor: pointer;
   font-family: cursive;
   top: 20%;
-
 }
 .tablinks {
   font-size: 30px;
@@ -111,7 +110,6 @@ input[type="text"],
   border: 5px solid black;
   border-radius: 4px;
 }
-
 
 input[type="date"],
 #date-of-task {
