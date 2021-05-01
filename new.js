@@ -25,34 +25,37 @@ let othersCount = 0;
 function addtask() {
   let value = $("#category1").val();
   if (value === "Personal") {
-    addNewData($("#Addtask").val(),$("#date").val())
+    
     $("#personalPendeing").append(`<div>
     <p> ${$("#Addtask").val()} </p>
     <p> ${$("#date").val()} </p>
     </div>
     <button  id='personalcompleted${personalCount}'>Add to completed</button>
     `);
-
-    $(`#personalcompleted${personalCount}`).click(addToCompleted);
-
-    personalCount++;
-  } else if (value === "Work") {
     addNewData($("#Addtask").val(),$("#date").val())
+    $(`#personalcompleted${personalCount}`).click(addToCompleted2);
+    personalCount++;
+
+  } else if (value === "Work") {
+    
     $("#workPendeing").append(`<div>
     <p> ${$("#Addtask").val()} </p>
     <p> ${$("#date").val()} </p>
     </div>
     <button  class='workcompleted${workCount}'>Add to completed</button>`);
+    addNewData($("#Addtask").val(),$("#date").val())
     $(`.workcompleted${workCount}`).click(addToCompleted2);
 
     workCount++;
+
   } else if (value === "Others") {
-    addNewData($("#Addtask").val(),$("#date").val())
+
     $("#othersPendeing").append(`<div>
     <p> ${$("#Addtask").val()} </p>
     <p> ${$("#date").val()} </p>
     </div>  
     <button  class='otherscompleted${othersCount}'>Add to completed</button> `);
+    addNewData($("#Addtask").val(),$("#date").val())
     $(`.otherscompleted${othersCount}`).click(addToCompleted3);
   }
   othersCount++;
@@ -92,16 +95,68 @@ function cleartask() {
 
 let data = JSON.parse(localStorage.getItem("dataInfo")) || [];
 
-
-// data.push({ key: "valueAddtask", value: "valuedate" });
-
-// localStorage.setItem("dataInfo", JSON.stringify(data));
-
 function addNewData (key, value) {
-  console.log();
+
+  $("#personalPendeing").html('')
   data.push({ task: key, date: value });
-  console.log(data);
   localStorage.setItem("dataInfo", JSON.stringify(data));
+  data.forEach(function( dataInfo){
+    $("#personalPendeing").append(`<div>
+    <p> ${dataInfo.task} </p>
+    <p> ${dataInfo.date} </p>
+    </div>
+    <button id='personalcompleted${personalCount}'>Add to completed</button>
+    `);
+    $(`#personalcompleted${personalCount}`).click(addToCompleted);
+
+  })
 };
 
-// localStorage.getItem(data);
+
+if(data.length) {
+  data.forEach(function( dataInfo){
+    $("#personalPendeing").append(`<div>
+    <p> ${dataInfo.task} </p>
+    <p> ${dataInfo.date} </p>
+    </div>
+    <button  id='personalcompleted${personalCount}'>Add to completed</button>
+    `);
+    
+
+  })
+  
+}
+
+let data = JSON.parse(localStorage.getItem("dataInfo")) || [];
+
+function addNewData (key, value) {
+
+  $("#workPendeing").html('')
+  data.push({ task: key, date: value });
+  localStorage.setItem("dataInfo", JSON.stringify(data));
+  data.forEach(function( dataInfo){
+    $("#workPendeing").append(`<div>
+    <p> ${dataInfo.task} </p>
+    <p> ${dataInfo.date} </p>
+    </div>
+    <button id='workcompleted${workCount}'>Add to completed</button>
+    `);
+    $(`#workcompleted${workCount}`).click(addToCompleted);
+
+  })
+};
+
+
+if(data.length) {
+  data.forEach(function( dataInfo){
+    $("#workPendeing").append(`<div>
+    <p> ${dataInfo.task} </p>
+    <p> ${dataInfo.date} </p>
+    </div>
+    <button  id='workcompleted${workCount}'>Add to completed</button>
+    `);
+    
+
+  })
+  
+}
