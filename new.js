@@ -25,6 +25,7 @@ let othersCount = 0;
 function addtask() {
   let value = $("#category1").val();
   if (value === "Personal") {
+    addNewData($("#Addtask").val(),$("#date").val())
     $("#personalPendeing").append(`<div>
     <p> ${$("#Addtask").val()} </p>
     <p> ${$("#date").val()} </p>
@@ -36,6 +37,7 @@ function addtask() {
 
     personalCount++;
   } else if (value === "Work") {
+    addNewData($("#Addtask").val(),$("#date").val())
     $("#workPendeing").append(`<div>
     <p> ${$("#Addtask").val()} </p>
     <p> ${$("#date").val()} </p>
@@ -45,6 +47,7 @@ function addtask() {
 
     workCount++;
   } else if (value === "Others") {
+    addNewData($("#Addtask").val(),$("#date").val())
     $("#othersPendeing").append(`<div>
     <p> ${$("#Addtask").val()} </p>
     <p> ${$("#date").val()} </p>
@@ -59,18 +62,21 @@ function addtask() {
 }
 
 function addToCompleted(e) {
+  addNewData($("#Addtask").val(),$("#date").val())
   e.target.style.display = "none";
   $("#personalCompleted").append(e.target.previousElementSibling);
   $("#personalPendeing").remove(`#${e.target.previousElementSibling.id}`);
 }
 
 function addToCompleted2(e) {
+  addNewData($("#Addtask").val(),$("#date").val())
   e.target.style.display = "none";
   $("#workCompleted").append(e.target.previousElementSibling);
   $("#workPendeing").remove(`#${e.target.previousElementSibling.id}`);
 }
 
 function addToCompleted3(e) {
+  addNewData($("#Addtask").val(),$("#date").val())
   e.target.style.display = "none";
   $("#othersCompleted").append(e.target.previousElementSibling);
   $("#othersPendeing").remove(`#${e.target.previousElementSibling.id}`);
@@ -82,15 +88,20 @@ function cleartask() {
   $("#othersCompleted").html("<h2> others completed</h2>");
 }
 
-//var data =[];
-//data.push({kay: "valuetask" ,value : valuedate});
 
-//localStorage.setItem('dataInfo', JSON.stringify(data));
 
-//var addNewdata = funcation (kay,value) {
-//var data = JSON.parse(localStorage.getItem('dataInfo')) || [];
-//data.push({kay: kay ,value : value});
+let data = JSON.parse(localStorage.getItem("dataInfo")) || [];
 
-//localStorage.setItem('dataInfo', JSON.stringify(data));
 
-//}
+// data.push({ key: "valueAddtask", value: "valuedate" });
+
+// localStorage.setItem("dataInfo", JSON.stringify(data));
+
+function addNewData (key, value) {
+  console.log();
+  data.push({ task: key, date: value });
+  console.log(data);
+  localStorage.setItem("dataInfo", JSON.stringify(data));
+};
+
+// localStorage.getItem(data);
