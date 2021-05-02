@@ -25,13 +25,14 @@ let othersCount = 0;
 function addtask() {
   let value = $("#category1").val();
   if (value === "Personal") {
+    
     $("#personalPendeing").append(`<div>
     <p> ${$("#Addtask").val()} </p>
     <p> ${$("#date").val()} </p>
     </div>
     <button  id='personalcompleted${personalCount}'>Add to completed</button>
     `);
-
+    // addNewData($("#Addtask").val(),$("#date").val())
     $(`#personalcompleted${personalCount}`).click(addToCompleted);
 
     personalCount++;
@@ -60,8 +61,10 @@ function addtask() {
 }
 
 function addToCompleted(e) {
+  // addNewData($("#Addtask").val(),$("#date").val())
   e.target.style.display = "none";
   $("#personalCompleted").append(e.target.previousElementSibling);
+  // console.log(e.target.previousElementSibling)
   $("#personalPendeing").remove(`#${e.target.previousElementSibling.id}`);
 }
 
@@ -82,17 +85,21 @@ function cleartask() {
   $("#personalCompleted").html(" <h2>personal completed</h2>");
   $("#othersCompleted").html("<h2> others completed</h2>");
 }
+// let array =[ ]
+//  let data = JSON.parse(localStorage.getItem("dataInfo")) || [];
 
-// let data = JSON.parse(localStorage.getItem("dataInfo")) || [];
+// // // // data.push({ key: "valueAddtask", value: "valuedate" });
 
-// // data.push({ key: "valueAddtask", value: "valuedate" });
+// // // // localStorage.setItem("dataInfo", JSON.stringify(data));
 
-// // localStorage.setItem("dataInfo", JSON.stringify(data));
-
-// function addNewData (key, value) {
+// function addNewData (key, value, isbend) {
 
 //   $("#personalPendeing").html('')
 //   data.push({ task: key, date: value });
+//   //  array.push({ task: key, date: value , status:isbend });
+//   //  localStorage.setItem("dataInfo", JSON.stringify(data));
+
+
 //   localStorage.setItem("dataInfo", JSON.stringify(data));
 //   data.forEach(function( dataInfo){
 //     $("#personalPendeing").append(`<div>
@@ -101,8 +108,21 @@ function cleartask() {
 //     </div>
 //     <button  id='personalcompleted${personalCount}'>Add to completed</button>
 //     `);
-
+//     // $(`#personalcompleted${personalCount}`).click(addToCompleted);
+    
 //   })
 // };
 
-// // localStorage.getItem(data);
+// if(data.length) {
+//   data.forEach(function( dataInfo){
+//     $("#personalPendeing").append(`<div>
+//     <p> ${dataInfo.task} </p>
+//     <p> ${dataInfo.date} </p>
+//     </div>
+//     <button  id='personalcompleted${personalCount}'>Add to completed</button>
+//     `);
+//     $(`#personalcompleted${personalCount}`).click(addToCompleted);
+//     personalCount++;
+//   })
+
+// }

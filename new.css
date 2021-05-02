@@ -13,134 +13,116 @@ html {
   text-align: center;
   background-position: center;
   color: black;
-
   font-family: cursive;
 }
-.contanier2 {
-  display: grid;
-}
+
 
 #header {
   text-align: center;
   font-size: 4rem;
   font-family: cursive;
+  display: grid;
 }
 
 .tab {
-  height: 70px;
-  width: 800px;
+  display: inline;
+  height: 50px;
+  width: 500px;
   text-align: center;
-  background: rgb(218, 176, 176);
+  background-color: #e3e3e34b;
   font-size: 1rem;
-  border-radius: 30px 10px;
+  border-radius: 15px 15px;
   border: solid black;
   cursor: pointer;
   font-family: cursive;
-  top: 20%;
+  padding: 27px 10px;
 }
 .tablinks {
   font-size: 30px;
   font-weight: 700;
   border-radius: 15px 15px;
   font-family: cursive;
-  width: 30%;
+  width:20%;
+  margin-left: 9px;
+  background-color: #e3e3e39a;
+  border: 2px solid black;
 }
 
 .tablinks:hover {
-  background-color: rgb(122, 112, 112);
+  background-color: #e3e3e3;
 }
 
 .main3 {
   font-size: large;
-  float: left;
+ 
+
 }
-#task-list {
+#task-list  , #task-work , #task-others{
   width: 15%;
   padding: 12px 20px;
-  margin: 5px 0;
-  display: block;
   border: 1px solid black;
-  background-color: rgb(96, 119, 112);
+  background-color: #e3e3e39a;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
-}
-#task-work {
-  width: 15%;
-  padding: 12px 20px;
-  margin: 5px 0;
-  display: block;
-  border: 1px solid black;
-  background-color: rgb(96, 119, 112);
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
+  margin-left: 255px;
+  border-radius: 15px 15px;
   
 }
-#task-others {
-  width: 15%;
-  padding: 12px 20px;
-  margin: 5px 0;
-  display: block;
-  border: 1px solid black;
-  background-color: rgb(96, 119, 112);
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-}
+
 
 #date-of-task {
-  height: 250px;
-  width: 250px;
-  border-radius: 5px;
-  background-color: #67837f;
+  display:flex;
+  height: 300px;
+  width: 150%;
+  border-radius: 15px 15px;
+  background-color: #e3e3e34b;
   font-size: large;
   position: absolute;
   bottom: 0;
-  right: 0;
+  left: 0;
   border: 5px solid black;
   text-align: left;
+  margin-left: 20px ;
+  
 }
 
-input[type="text"],
-#date-of-task {
+input[type="text"],input[type="date"],
+#date-of-task,#category1 {
   width: 30%;
   padding: 12px 20px;
   margin: 8px 0;
   display: block;
-  border: 5px solid black;
-  border-radius: 4px;
+  border: solid black;
+  border-radius: 15px 15px;
 }
 
-input[type="date"],
-#date-of-task {
+#add-task ,#clear {
   width: 30%;
   padding: 12px 20px;
   margin: 8px 0;
-  display: block;
-  border: 5px solid black;
-  border-radius: 4px;
+  display: inline;
+  border: 2px solid black;
+  border-radius: 15px 15px;
+  font-size: medium;
 }
 
 #personalPendeing,
 #workPendeing,
-#othersPendeing {
-  border-style: solid;
-  width: 100%;
-  height: 100%;
-  color: blanchedalmond;
-  border: 5px solid black;
-}
-
-#personalCompleted,
+#othersPendeing, #personalCompleted,
 #workCompleted,
 #othersCompleted {
   border-style: solid;
   width: 100%;
   height: 100%;
-  color: blanchedalmond;
+  color: black;
   border: 5px solid black;
+  margin: 8px;
+  margin-left: 3px;
+  border-radius: 15px 15px;
+  
 }
+
 
 #weather {
   display: inline;
@@ -150,8 +132,9 @@ input[type="date"],
 }
 .radio {
   position: fixed;
-  bottom: 0;
-  left: 0;
+  bottom:  0;
+  right: 0;
+ 
 }
 
 @media all and (max-width: 800px) {
