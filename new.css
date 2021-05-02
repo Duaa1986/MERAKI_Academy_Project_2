@@ -59,15 +59,9 @@ html {
 }
 #task-list  , #task-work , #task-others{
   width: 15%;
-  padding: 12px 20px;
-  border: 1px solid black;
-  background-color: #e3e3e39a;
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  margin-left: 255px;
-  border-radius: 15px 15px;
-  
+height: auto;
+margin-left: 255px;
+  margin-top: 30px;
 }
 
 

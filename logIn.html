@@ -1,18 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-    <form action="http://www.example.com" method="post">
-        <input type="Username" placeholder="Username" />
-        <input type="password" placeholder="Password" />
-        <input  type="submit" value="Log in" />
-    </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>To Do List</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="start">
+        <button class="tablinks" onclick="openlist(event, 'rejester')">
+          rejester
+        </button>
+        <button class="tablinks" onclick="openlist(event, 'login')">
+          login
+        </button>
+      </div>
+      <div id="rejester">
+      
+         
+          <input type="text" placeholder="first name" />
+        
+          <input type="text" placeholder="last name" />
+         
+          <input type="text" placeholder="email" />
+       
+        <div class="btn"><a href="#">rejester</a></div>
+      </div>
+      <div id="login">
+        <input type="text" placeholder="Email" />
 
-</body>
+        <input type="text" placeholder="Password" />
+        <div class="btn"><a href="#">login</a></div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
 </html>
