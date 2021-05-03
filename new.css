@@ -3,6 +3,16 @@
   margin: 0;
 }
 
+#form {
+  display: grid;
+  text-align: center;
+  display: inline;
+  align-content: center;
+  position: fixed;
+  left: 40rem;
+  top: 10rem;
+  }
+
 body,
 html {
   background-image: url("./6.jpg");

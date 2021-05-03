@@ -1,3 +1,13 @@
+$(".container").hide();
+function login() {
+  if ($("#username").val() === "admin" && $("#password").val() === "admin") {
+      $(".container").show();
+      $(".loginpage").hide();  
+  } else {
+    alert("You are not a valid user");
+  }
+}
+
 $("#task-list").hide();
 $("#task-work").hide();
 $("#task-others").hide();
