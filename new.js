@@ -4,7 +4,7 @@ function login() {
     $(".container").show();
     $(".loginpage").hide();
   } else {
-    alert("You are not a valid user");
+    alert("Invalid UserName & Password!");
   }
 }
 
