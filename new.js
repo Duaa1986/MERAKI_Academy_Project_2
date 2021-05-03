@@ -31,8 +31,8 @@ const openlist = (button) => {
 let personalCount = 0;
 let workCount = 0;
 let othersCount = 0;
-let personaldata = JSON.parse(localStorage.getItem("personaldata")) || [];
-let personalcompleted = JSON.parse(localStorage.getItem("personalcompleted")) || [];
+// let personaldata = JSON.parse(localStorage.getItem("personaldata")) || [];
+// let personalcompleted = JSON.parse(localStorage.getItem("personalcompleted")) || [];
 
 
 addNewData(personaldata)
@@ -46,15 +46,15 @@ function addtask() {
     </div>
     <button  id='personalcompleted${personalCount}'>Add to completed</button>
     `);
+         $(`#personalcompleted${personalCount}`).click(addToCompleted);
 
     //local storage
-    personaldata.push({ task: $("#Addtask").val(), date: $("#date").val() });
+    // personaldata.push({ task: $("#Addtask").val(), date: $("#date").val() });
 
-    localStorage.setItem("personaldata", JSON.stringify(personaldata));
+    // localStorage.setItem("personaldata", JSON.stringify(personaldata));
 
-    addNewData(personaldata);
+    // addNewData(personaldata);
 
-    $(`#personalcompleted${personalCount}`).click(addToCompleted);
 
     personalCount++;
   } else if (value === "Work") {
@@ -63,15 +63,15 @@ function addtask() {
     <p> ${$("#date").val()} </p>
     </div>
     <button  class='workcompleted${workCount}'>Add to completed</button>`);
+     $(`.workcompleted${workCount}`).click(addToCompleted2);
 
-    //local storage
-    data.push({ task: $("#Addtask").val(), date: $("#date").val() });
+    // //local storage
+    // data.push({ task: $("#Addtask").val(), date: $("#date").val() });
 
-    localStorage.setItem("dataInfo", JSON.stringify(data));
+    // localStorage.setItem("dataInfo", JSON.stringify(data));
 
-    addNewData(data);
+    // addNewData(data);
 
-    $(`.workcompleted${workCount}`).click(addToCompleted2);
 
     workCount++;
   } else if (value === "Others") {
@@ -80,13 +80,14 @@ function addtask() {
     <p> ${$("#date").val()} </p>
     </div>  
     <button  class='otherscompleted${othersCount}'>Add to completed</button> `);
-    //local storage
-    data.push({ task: $("#Addtask").val(), date: $("#date").val() });
+       $(`.otherscompleted${othersCount}`).click(addToCompleted3);
 
-    localStorage.setItem("othersInfo", JSON.stringify(data));
+    // //local storage
+    // data.push({ task: $("#Addtask").val(), date: $("#date").val() });
 
-    addNewData(data);
-    $(`.otherscompleted${othersCount}`).click(addToCompleted3);
+    // localStorage.setItem("othersInfo", JSON.stringify(data));
+
+    // addNewData(data);
   }
   othersCount++;
 
@@ -95,38 +96,42 @@ function addtask() {
 }
 
 function addToCompleted(e) {
-  console.log(e.target.previousElementSibling.firstChild.nextSibling.textContent);
-  console.log(e.target.previousElementSibling.lastChild.previousSibling.textConten);
-
-  personalcompleted.push({
-    task: e.target.previousElementSibling.firstChild.nextSibling.textContent,
-    date: e.target.previousElementSibling.lastChild.previousSibling.textContent,
-  });
-  localStorage.setItem("personalcompleted", JSON.stringify(personalcompleted));
-
-
   e.target.style.display = "none";
-  $("#personalCompleted").html("<h2>personal completed</h2>");
+  $("#personalCompleted").append(e.target.previousElementSibling);
+  $("#personalPendeing").remove(`#${e.target.previousElementSibling.id}`);
+}
+//   console.log(e.target.previousElementSibling.firstChild.nextSibling.textContent);
+//   console.log(e.target.previousElementSibling.lastChild.previousSibling.textConten);
+
+//   personalcompleted.push({
+//     task: e.target.previousElementSibling.firstChild.nextSibling.textContent,
+//     date: e.target.previousElementSibling.lastChild.previousSibling.textContent,
+//   });
+//   localStorage.setItem("personalcompleted", JSON.stringify(personalcompleted));
+
+
+//   e.target.style.display = "none";
+//   $("#personalCompleted").html("<h2>personal completed</h2>");
 
 
 
-  personalcompleted.forEach(dataInfo => {
-     $("#personalCompleted").append(`<div>
-     <p> ${dataInfo.task} </p>
-     <p> ${dataInfo.data} </p>
-     </div>  `);  
-  })
+//   personalcompleted.forEach(dataInfo => {
+//      $("#personalCompleted").append(`<div>
+//      <p> ${dataInfo.task} </p>
+//      <p> ${dataInfo.data} </p>
+//      </div>  `);  
+//   })
 
 
-  $("#workPendeing").remove(`#${e.target.previousElementSibling.id}`);
+//   $("#workPendeing").remove(`#${e.target.previousElementSibling.id}`);
 
-  // localStorage.setItem("personaldata", JSON.stringify(personaldata));
+//   // localStorage.setItem("personaldata", JSON.stringify(personaldata));
 
-  // addNewData(personaldata)
+//   // addNewData(personaldata)
 
 
  
-}
+// }
 
 function addToCompleted2(e) {
  
@@ -149,18 +154,18 @@ function cleartask() {
 }
 
 
-function addNewData(data) {
-  $("#personalPendeing").html("<h2>*P*pending</h2>");
-  data.forEach(function (dataInfo) {
-    $("#personalPendeing").append(`<div>
-  <p> ${dataInfo.task} </p>
-  <p> ${dataInfo.date} </p>
-  </div>
-  <button  id='personalcompleted${personalCount}'>Add to completed</button>
-  `);
-    $(`#personalcompleted${personalCount}`).click(addToCompleted);
-  });
-}
+// function addNewData(data) {
+//   $("#personalPendeing").html("<h2>*P*pending</h2>");
+//   data.forEach(function (dataInfo) {
+//     $("#personalPendeing").append(`<div>
+//   <p> ${dataInfo.task} </p>
+//   <p> ${dataInfo.date} </p>
+//   </div>
+//   <button  id='personalcompleted${personalCount}'>Add to completed</button>
+//   `);
+//     $(`#personalcompleted${personalCount}`).click(addToCompleted);
+//   });
+// }
 
 // if (data.length) {
 //   data.forEach(function (dataInfo) {

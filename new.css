@@ -6,11 +6,24 @@
 #form {
   display: grid;
   text-align: center;
-  display: inline;
   align-content: center;
   position: fixed;
-  left: 40rem;
-  top: 10rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline;
+  border: 2px solid black;
+  border-radius: 15px 15px;
+  font-size: medium;
+  }
+  #h1{
+    text-align: center;
+  font-size: 4rem;
+  font-family: cursive;
+  display: grid;
   }
 
 body,
@@ -92,7 +105,7 @@ margin-left: 255px;
 }
 
 input[type="text"],input[type="date"],
-#date-of-task,#category1 {
+#date-of-task,#category1,#password {
   width: 30%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -101,7 +114,7 @@ input[type="text"],input[type="date"],
   border-radius: 15px 15px;
 }
 
-#add-task ,#clear {
+#add-task ,#clear, #login {
   width: 30%;
   padding: 12px 20px;
   margin: 8px 0;
