@@ -8,6 +8,20 @@ function login() {
   }
 }
 
+$("#theme-switcher").click(function () {
+  let element = document.body;
+  element.classList.toggle("light");
+  let h1 = document.getElementById("h1");
+  h1.classList.toggle("light");
+  let main3 =document.getElementById(".main3")
+  main3.classList.toggle("light");
+  if ($("#sun").attr("src") != "./icon-sun.svg") {
+    $("#sun").attr("src", "./icon-sun.svg");
+  } else {
+    $("#sun").attr("src", "./icon-moon.svg");
+  }
+});
+
 $("#task-list").hide();
 $("#task-work").hide();
 $("#task-others").hide();
