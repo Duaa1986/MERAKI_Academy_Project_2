@@ -1,6 +1,8 @@
 * {
   padding: 0;
   margin: 0;
+  --mainColor:white;
+  --contrastColor:black;
 }
 
 #form {
@@ -14,7 +16,7 @@ transform: translate(-50%, -50%);
 width: 30%;
 padding: 12px 20px;
 margin: 8px 0;
-border: 2px solid black;
+border: 2px solid var(--contrastColor)k;
 border-radius: 15px 15px;
 font-size: medium;
 column-gap: 2px;
@@ -24,7 +26,7 @@ column-gap: 2px;
   padding: 20px 20px;
   margin: 8px 0 0px 5rem;
   display: inline-flex;
-  border: solid black;
+  border: solid var(--contrastColor);
   border-radius: 15px 15px;
 
 }
@@ -38,7 +40,7 @@ column-gap: 2px;
   padding: 9px 13px;
   margin: 8px 0 0px 8rem;
   display: inline;
-  border: solid black;
+  border: solid var(--contrastColor);
   border-radius: 15px 15px;
 } 
 
@@ -65,7 +67,7 @@ html {
   background-size: cover;
   text-align: center;
   background-position: center;
-  color: black;
+  color: var(--contrastColor);
   font-family: cursive;
 }
 
@@ -77,10 +79,10 @@ body.light {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  color: white;
+  color: var(--mainColor);
 }
 .main3.light {
-  color: white;
+  color: var(--mainColor);
 }
 #header {
   text-align: center;
@@ -97,7 +99,7 @@ body.light {
   background-color: #e3e3e34b;
   font-size: 1rem;
   border-radius: 15px 15px;
-  border: solid black;
+  border: solid var(--contrastColor);
   cursor: pointer;
   font-family: cursive;
   padding: 27px 10px;
@@ -110,7 +112,7 @@ body.light {
   width: 20%;
   margin-left: 9px;
   background-color: #e3e3e39a;
-  border: 2px solid black;
+  border: 2px solid var(--contrastColor);
 }
 
 
@@ -139,7 +141,7 @@ body.light {
   position: fixed;
   bottom: 0;
   right: 5%;
-  border: 5px solid black;
+  border: 5px solid var(--contrastColor);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -157,7 +159,7 @@ input[type="date"],
   padding: 9px 15px;
   margin: 8px 0;
   display: block;
-  border: solid black;
+  border: solid var(--contrastColor);
   border-radius: 15px 15px;
 } 
 #category1{
@@ -172,7 +174,7 @@ input[type="date"],
   padding: 9px 13px 5px 5px;
   margin: 8px 0;
   display: inline;
-  border: 2px solid black;
+  border: 2px solid var(--contrastColor);
   border-radius: 15px 15px;
   font-size: medium;
 } 
@@ -186,8 +188,8 @@ input[type="date"],
   border-style: solid;
   width: 100%;
   height: 100%;
-  color: black;
-  border: 5px solid black;
+  color: var(--contrastColor);
+  border: 5px solid var(--contrastColor);
   margin: 8px;
   margin-left: 3px;
   border-radius: 15px 15px;
@@ -221,7 +223,7 @@ input[type="date"],
     background-color: #e3e3e34b;
     font-size: small;
     position: flex;
-    border: 5px solid black;
+    border: 5px solid var(--contrastColor);
     text-align: left;
   }
   .radio {
