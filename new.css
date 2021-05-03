@@ -91,13 +91,13 @@ margin-left: 255px;
 #date-of-task {
   display:flex;
   height: 300px;
-  width: 150%;
+  width: 150%;;
   border-radius: 15px 15px;
   background-color: #e3e3e34b;
   font-size: large;
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  left: 0;
+  left: 55.5rem;
   border: 5px solid black;
   text-align: left;
   margin-left: 20px ;
@@ -150,7 +150,7 @@ input[type="text"],input[type="date"],
 .radio {
   position: fixed;
   bottom:  0;
-  right: 0;
+  left: 0;
  
 }
 
@@ -158,9 +158,21 @@ input[type="text"],input[type="date"],
   *,
   html,
   body {
+
     grid-template-columns: flex;
     justify-content: center;
     align-items: flex-start;
+  }
+  #date-of-task {
+  display:flex;
+  height: 75%;
+  width: 75%;
+  border-radius: 15px 15px;
+  background-color: #e3e3e34b;
+  font-size: small;
+  position: flex;
+  border: 5px solid black;
+  text-align: left;
   }
   .radio {
     display: none;
