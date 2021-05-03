@@ -4,21 +4,43 @@
 }
 
 #form {
-  display: grid;
-  text-align: center;
-  align-content: center;
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 30%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline;
-  border: 2px solid black;
-  border-radius: 15px 15px;
-  font-size: medium;
+  display: flex;
+flex-direction: column; 
+align-content: center;
+position: fixed;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+width: 30%;
+padding: 12px 20px;
+margin: 8px 0;
+border: 2px solid black;
+border-radius: 15px 15px;
+font-size: medium;
+column-gap: 2px;
 }
+#password, #username{
+  width: 50%;
+  padding: 20px 20px;
+  margin: 8px 0 0px 5rem;
+  display: inline-flex;
+  border: solid black;
+  border-radius: 15px 15px;
+
+}
+#login{
+  font-size: larger;
+  font-weight: bolder;
+  align-items: center;
+  align-content: center;
+  text-align:center;
+  width: 35%;
+  padding: 9px 13px;
+  margin: 8px 0 0px 8rem;
+  display: inline;
+  border: solid black;
+  border-radius: 15px 15px;
+} 
 
 #theme-switcher {
   background: transparent;
@@ -91,6 +113,7 @@ body.light {
   border: 2px solid black;
 }
 
+
 .tablinks:hover {
   background-color: #e3e3e3;
 }
@@ -108,44 +131,51 @@ body.light {
 }
 
 #date-of-task {
-  display: flex;
   height: 300px;
-  width: 150%;
+  width:20%;
   border-radius: 15px 15px;
   background-color: #e3e3e34b;
   font-size: large;
   position: fixed;
   bottom: 0;
-  left: 55.5rem;
+  right: 5%;
   border: 5px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: left;
-  margin-right: 20px;
+  column-gap: 5px;
+ 
 }
+  
 
 input[type="text"],
 input[type="date"],
-#date-of-task,
-#category1,
-#password {
-  width: 30%;
-  padding: 9px 13px;
+#category1 {
+  width: 40%;
+  padding: 9px 15px;
   margin: 8px 0;
   display: block;
   border: solid black;
   border-radius: 15px 15px;
+} 
+#category1{
+  width: 70%;
 }
-
-#add-task,
-#clear,
-#login {
-  width: 30%;
-  padding: 9px 13px;
+#Addtask{
+  width: 50%;
+  height: auto;
+}
+#add-task,#clear{
+  width: 45%;
+  padding: 9px 13px 5px 5px;
   margin: 8px 0;
   display: inline;
   border: 2px solid black;
   border-radius: 15px 15px;
   font-size: medium;
-}
+} 
 
 #personalPendeing,
 #workPendeing,
