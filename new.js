@@ -16,9 +16,9 @@ $("#theme-switcher").click(function () {
   let main3 = document.getElementById(".main3");
   main3.classList.toggle("light");
   if ($("#sun").attr("src") != "./icon-sun.svg") {
-    $("#sun").attr("src", "./icon-sun.svg");
+    $("#sun").attr("src",".icon-sun.svg");
   } else {
-    $("#sun").attr("src", "./icon-moon.svg");
+    $("#sun").attr("src",".icon-moon.svg");
   }
 });
 
