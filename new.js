@@ -78,7 +78,7 @@ function addtask() {
     <button  class='workcompleted${workCount}'>Add to completed</button>`);
     $(`.workcompleted${workCount}`).click(addToCompleted2);
 
-    // //local storage
+    // local storage
     // data.push({ task: $("#Addtask").val(), date: $("#date").val() });
 
     // localStorage.setItem("dataInfo", JSON.stringify(data));
