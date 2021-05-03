@@ -29,6 +29,7 @@
   display: inline-flex;
   border: solid var(--contrastColor);
   border-radius: 15px 15px;
+  font-size: larger;
 }
 #login {
   font-size: larger;
