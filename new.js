@@ -1,8 +1,8 @@
 $(".container").hide();
 function login() {
   if ($("#username").val() === "admin" && $("#password").val() === "admin") {
-      $(".container").show();
-      $(".loginpage").hide();  
+    $(".container").show();
+    $(".loginpage").hide();
   } else {
     alert("You are not a valid user");
   }
@@ -13,7 +13,7 @@ $("#theme-switcher").click(function () {
   element.classList.toggle("light");
   let h1 = document.getElementById("h1");
   h1.classList.toggle("light");
-  let main3 =document.getElementById(".main3")
+  let main3 = document.getElementById(".main3");
   main3.classList.toggle("light");
   if ($("#sun").attr("src") != "./icon-sun.svg") {
     $("#sun").attr("src", "./icon-sun.svg");
@@ -48,8 +48,7 @@ let othersCount = 0;
 // let personaldata = JSON.parse(localStorage.getItem("personaldata")) || [];
 // let personalcompleted = JSON.parse(localStorage.getItem("personalcompleted")) || [];
 
-
-addNewData(personaldata)
+// addNewData(personaldata)
 
 function addtask() {
   let value = $("#category1").val();
@@ -59,16 +58,16 @@ function addtask() {
     <p> ${$("#date").val()} </p>
     </div>
     <button  id='personalcompleted${personalCount}'>Add to completed</button>
+   
     `);
-         $(`#personalcompleted${personalCount}`).click(addToCompleted);
+    $(`#personalcompleted${personalCount}`).click(addToCompleted);
 
-    //local storage
+    // // local storage
     // personaldata.push({ task: $("#Addtask").val(), date: $("#date").val() });
 
     // localStorage.setItem("personaldata", JSON.stringify(personaldata));
 
     // addNewData(personaldata);
-
 
     personalCount++;
   } else if (value === "Work") {
@@ -77,7 +76,7 @@ function addtask() {
     <p> ${$("#date").val()} </p>
     </div>
     <button  class='workcompleted${workCount}'>Add to completed</button>`);
-     $(`.workcompleted${workCount}`).click(addToCompleted2);
+    $(`.workcompleted${workCount}`).click(addToCompleted2);
 
     // //local storage
     // data.push({ task: $("#Addtask").val(), date: $("#date").val() });
@@ -86,7 +85,6 @@ function addtask() {
 
     // addNewData(data);
 
-
     workCount++;
   } else if (value === "Others") {
     $("#othersPendeing").append(`<div>
@@ -94,7 +92,7 @@ function addtask() {
     <p> ${$("#date").val()} </p>
     </div>  
     <button  class='otherscompleted${othersCount}'>Add to completed</button> `);
-       $(`.otherscompleted${othersCount}`).click(addToCompleted3);
+    $(`.otherscompleted${othersCount}`).click(addToCompleted3);
 
     // //local storage
     // data.push({ task: $("#Addtask").val(), date: $("#date").val() });
@@ -123,19 +121,15 @@ function addToCompleted(e) {
 //   });
 //   localStorage.setItem("personalcompleted", JSON.stringify(personalcompleted));
 
-
 //   e.target.style.display = "none";
 //   $("#personalCompleted").html("<h2>personal completed</h2>");
-
-
 
 //   personalcompleted.forEach(dataInfo => {
 //      $("#personalCompleted").append(`<div>
 //      <p> ${dataInfo.task} </p>
 //      <p> ${dataInfo.data} </p>
-//      </div>  `);  
+//      </div>  `);
 //   })
-
 
 //   $("#workPendeing").remove(`#${e.target.previousElementSibling.id}`);
 
@@ -143,19 +137,15 @@ function addToCompleted(e) {
 
 //   // addNewData(personaldata)
 
-
- 
 // }
 
 function addToCompleted2(e) {
- 
   e.target.style.display = "none";
   $("#workCompleted").append(e.target.previousElementSibling);
   $("#workPendeing").remove(`#${e.target.previousElementSibling.id}`);
 }
 
 function addToCompleted3(e) {
- 
   e.target.style.display = "none";
   $("#othersCompleted").append(e.target.previousElementSibling);
   $("#othersPendeing").remove(`#${e.target.previousElementSibling.id}`);
@@ -167,7 +157,7 @@ function cleartask() {
   $("#othersCompleted").html("<h2> others completed</h2>");
 }
 
-
+// testing local storage
 // function addNewData(data) {
 //   $("#personalPendeing").html("<h2>*P*pending</h2>");
 //   data.forEach(function (dataInfo) {
@@ -189,7 +179,7 @@ function cleartask() {
 //     </div>
 //     <button  id='personalcompleted${personalCount}'>Add to completed</button>
 //     `);
-//     $(`#personalcompleted${personalCount}`).click(addToCompleted);
+//     // $(`#personalcompleted${personalCount}`).click(addToCompleted);
 //     personalCount++;
 //   });
 // }

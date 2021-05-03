@@ -10,7 +10,7 @@
   position: fixed;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   width: 30%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -18,21 +18,21 @@
   border: 2px solid black;
   border-radius: 15px 15px;
   font-size: medium;
-  }
+}
 
-  #theme-switcher {
-    background: transparent;
-    border: none;
-    display: inline-block;
-    position: fixed;
-    left: 0%;
-  }
-  #h1{
-    text-align: center;
+#theme-switcher {
+  background: transparent;
+  border: none;
+  display: inline-block;
+  position: fixed;
+  left: 0%;
+}
+#h1 {
+  text-align: center;
   font-size: 4rem;
   font-family: cursive;
   display: grid;
-  }
+}
 
 body,
 html {
@@ -48,15 +48,16 @@ html {
 }
 
 body.light {
-  background-image: url(./black.jpeg);
+  background-image: url("./7.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  color: white;}
-.main3.light{
+  color: white;
+}
+.main3.light {
   color: white;
 }
 #header {
@@ -84,7 +85,7 @@ body.light {
   font-weight: 700;
   border-radius: 15px 15px;
   font-family: cursive;
-  width:20%;
+  width: 20%;
   margin-left: 9px;
   background-color: #e3e3e39a;
   border: 2px solid black;
@@ -96,21 +97,20 @@ body.light {
 
 .main3 {
   font-size: large;
- 
-
 }
-#task-list  , #task-work , #task-others{
+#task-list,
+#task-work,
+#task-others {
   width: 15%;
-height: auto;
-margin-left: 255px;
+  height: auto;
+  margin-left: 255px;
   margin-top: 30px;
 }
 
-
 #date-of-task {
-  display:flex;
+  display: flex;
   height: 300px;
-  width: 150%;;
+  width: 150%;
   border-radius: 15px 15px;
   background-color: #e3e3e34b;
   font-size: large;
@@ -119,23 +119,27 @@ margin-left: 255px;
   left: 55.5rem;
   border: 5px solid black;
   text-align: left;
-  margin-left: 20px ;
-  
+  margin-right: 20px;
 }
 
-input[type="text"],input[type="date"],
-#date-of-task,#category1,#password {
+input[type="text"],
+input[type="date"],
+#date-of-task,
+#category1,
+#password {
   width: 30%;
-  padding: 12px 20px;
+  padding: 9px 13px;
   margin: 8px 0;
   display: block;
   border: solid black;
   border-radius: 15px 15px;
 }
 
-#add-task ,#clear, #login {
+#add-task,
+#clear,
+#login {
   width: 30%;
-  padding: 12px 20px;
+  padding: 9px 13px;
   margin: 8px 0;
   display: inline;
   border: 2px solid black;
@@ -145,7 +149,8 @@ input[type="text"],input[type="date"],
 
 #personalPendeing,
 #workPendeing,
-#othersPendeing, #personalCompleted,
+#othersPendeing,
+#personalCompleted,
 #workCompleted,
 #othersCompleted {
   border-style: solid;
@@ -156,9 +161,7 @@ input[type="text"],input[type="date"],
   margin: 8px;
   margin-left: 3px;
   border-radius: 15px 15px;
-  
 }
-
 
 #weather {
   display: inline;
@@ -168,30 +171,28 @@ input[type="text"],input[type="date"],
 }
 .radio {
   position: fixed;
-  bottom:  0;
+  bottom: 0;
   left: 0;
- 
 }
 
 @media all and (max-width: 800px) {
   *,
   html,
   body {
-
     grid-template-columns: flex;
     justify-content: center;
     align-items: flex-start;
   }
   #date-of-task {
-  display:flex;
-  height: 75%;
-  width: 75%;
-  border-radius: 15px 15px;
-  background-color: #e3e3e34b;
-  font-size: small;
-  position: flex;
-  border: 5px solid black;
-  text-align: left;
+    display: flex;
+    height: 75%;
+    width: 75%;
+    border-radius: 15px 15px;
+    background-color: #e3e3e34b;
+    font-size: small;
+    position: flex;
+    border: 5px solid black;
+    text-align: left;
   }
   .radio {
     display: none;
